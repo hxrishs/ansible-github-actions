@@ -1,0 +1,4 @@
+---
+- name: Execute example task
+  debug:
+    msg: "This task is executed by the Ansible role."

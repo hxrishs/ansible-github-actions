@@ -1,0 +1,13 @@
+---
+- name: Upgrade or Install Packages on AWS Instances
+  hosts: your_ec2_instance_group
+  become: yes
+  tasks:
+    - name: Update package cache
+      package_facts:
+        manager: auto
+
+    - name: Upgrade all packages
+      package:
+        name: "*"
+        state: latest
