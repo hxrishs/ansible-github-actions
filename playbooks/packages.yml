@@ -1,7 +1,9 @@
----
 - name: Install Telnet and Python packages
   hosts: web_servers
   become: yes
   roles:
-    - telnet
-    - python
+    - name: telnet
+      role: /roles/telnet/tasks
+      
+    - name: python
+      role: /roles/python/tasks
