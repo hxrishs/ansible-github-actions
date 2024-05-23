@@ -1,13 +1,7 @@
 ---
-- name: Upgrade or Install Packages on AWS Instances
-  hosts: inventories/production/hosts
+- name: Install Telnet and Python packages
+  hosts: web_servers
   become: yes
-  tasks:
-    - name: Update package cache
-      package_facts:
-        manager: auto
-
-    - name: Upgrade all packages
-      package:
-        name: "*"
-        state: latest
+  roles:
+    - telnet
+    - python
