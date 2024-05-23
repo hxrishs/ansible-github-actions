@@ -3,7 +3,4 @@
   become: yes
   roles:
     - name: telnet
-      role: /roles/telnet/tasks
-      
     - name: python
-      role: /roles/python/tasks
