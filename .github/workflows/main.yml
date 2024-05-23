@@ -23,11 +23,11 @@ jobs:
     - name: Install Ansible
       run: pip install ansible
 
-    - name: Set SSH private key
-      run: |
-        mkdir -p ~/.ssh/
-        echo "${{ secrets.PEM_KEY }}" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
+    # - name: Set SSH private key
+    #   run: |
+    #     mkdir -p ~/.ssh/
+    #     echo "${{ secrets.PEM_KEY }}" > ~/.ssh/id_rsa
+    #     chmod 600 ~/.ssh/id_rsa
 
     - name: Run Ansible Playbook
       run: ansible-playbook -i inventories/production/hosts playbooks/packages.yml
