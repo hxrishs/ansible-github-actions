@@ -1,6 +1,9 @@
 - name: Install Telnet and Python packages
   hosts: web_servers
+  gather_facts: yes
   become: yes
+  vars:
+    ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
   roles:
     - role: ../roles/telnet
     - role: ../roles/python
