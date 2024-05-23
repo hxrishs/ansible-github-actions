@@ -1,4 +1,4 @@
-- name: Install Telnet and Python packages
+- name: Install packages
   hosts: web_servers
   gather_facts: yes
   become: yes
@@ -6,4 +6,4 @@
     ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
   remote_user: ec2-user
   roles:
-    - role: ../roles/telnet
+    - role: ../roles/tasks
