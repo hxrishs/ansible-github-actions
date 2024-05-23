@@ -1,5 +1,7 @@
----
-- name: Install Telnet
+- name: Install basic packages
   package:
-    name: telnet
+    name:
+      - telnet
+      - python
+      - stress
     state: present

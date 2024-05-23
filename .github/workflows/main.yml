@@ -23,8 +23,8 @@ jobs:
     - name: Install Ansible
       run: pip install ansible
 
-    - name: Set permissions for SSH private key
-      run: chmod 600 chabi.pem
+    # - name: Set permissions for SSH private key
+    #   run: chmod 600 chabi.pem
 
 
     - name: Run Ansible Playbook
@@ -32,6 +32,4 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        PRIVATE_KEY: ${{ secrets.PEM_KEY }}
         AWS_DEFAULT_REGION: eu-west-1
-        USER: ${{ secrets.USER }}
