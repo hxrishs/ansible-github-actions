@@ -1,6 +1,6 @@
 ---
 - name: Upgrade or Install Packages on AWS Instances
-  hosts: your_ec2_instance_group
+  hosts: inventories/production/hosts/web_servers
   become: yes
   tasks:
     - name: Update package cache
