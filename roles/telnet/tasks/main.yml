@@ -1,7 +1,6 @@
-- name: Install basic packages with yum
+- name: Install basic packages
   package:
     name:
       - telnet
-      - stress
       - python
     state: present
