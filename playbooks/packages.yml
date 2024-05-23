@@ -1,6 +1,6 @@
 ---
 - name: Upgrade or Install Packages on AWS Instances
-  hosts: inventories/production/hosts/web_servers
+  hosts: inventories/production/hosts
   become: yes
   tasks:
     - name: Update package cache
