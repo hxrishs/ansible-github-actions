@@ -2,6 +2,5 @@
   hosts: web_servers
   become: yes
   roles:
-    - name: telnet
-    - name: python
-
+    - role: telnet
+    - role: python
