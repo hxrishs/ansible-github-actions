@@ -1,4 +1,4 @@
 - name: Install basic packages
   yum:
-    name: [telnet, stress, python, libgdiplus]
+    name: [telnet, stress, python, libgdiplus, epel]
     state: present
