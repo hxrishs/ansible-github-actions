@@ -6,4 +6,4 @@
     ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
   remote_user: ec2-user
   roles:
-    - tasks
+    - role: tasks
