@@ -4,6 +4,7 @@
   become: yes
   vars:
     ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
+  remote_user: ec2-user  # Specify the SSH user here
   roles:
     - role: ../roles/telnet
     - role: ../roles/python
